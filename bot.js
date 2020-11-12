@@ -33,21 +33,34 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     message: 'Pong!'
                 });
 				break;
-			case 'lol':
-			 bot.sendMessage({
-                    to: channelID,
-                    message: user + ' has raha hai!'
-                });
-				break;
+				
 			case 'man':
 			 bot.sendMessage({
                     to: channelID,
                     message: 'subscibre'
                 });
 				break;
+	
+			default:
+			 bot.sendMessage({
+					to: channelID,
+					message: 'Hi'
+				});
 				
             
             // Just add any case commands if you want to..
          }
      }
+	 else if(message.substring(0,1) == 'F'){
+		 bot.sendMessage({
+                    to: channelID,
+                    message: user + ' respect pay kar raha hai.'
+                });
+	 }
+	 else if(message.substring(0,3) == 'lol'){
+		 bot.sendMessage({
+                    to: channelID,
+                    message: user + ' has raha hai haha.'
+                });
+	 }
 });
